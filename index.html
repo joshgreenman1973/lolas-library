@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lola's Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f9f6f1;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: #4a2040;
+      color: white;
+      padding: 2.8rem 1.5rem 2.2rem;
+      position: relative;
+    }
+
+    header .inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    header .tagline {
+      font-size: 1rem;
+      margin-top: 0.4rem;
+      color: #d4a0c0;
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: white;
+      border-bottom: 1px solid #e5ddd5;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .inner {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0;
+    }
+
+    nav a {
+      display: block;
+      color: #888;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.75rem 1.2rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s;
+    }
+
+    nav a:hover { color: #4a2040; }
+    nav a.active { color: #4a2040; border-bottom-color: #c0506e; }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    /* ── WEEK HEADER ── */
+    .week-header {
+      margin-bottom: 0.6rem;
+    }
+
+    .week-header h2 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.5rem;
+      color: #4a2040;
+      font-weight: 700;
+    }
+
+    .week-header .date {
+      font-size: 0.82rem;
+      color: #999;
+      margin-top: 0.15rem;
+    }
+
+    /* ── INTRO ── */
+    .intro-note {
+      margin: 1rem 0 2.2rem;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #555;
+      max-width: 620px;
+    }
+
+    /* ── BOOK CARD ── */
+    .book-card {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 0;
+      margin-bottom: 2rem;
+      background: white;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+
+    .book-cover {
+      position: relative;
+      background: #ece6df;
+    }
+
+    .book-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .book-cover .pick-num {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: #4a2040;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      font-size: 0.72rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .book-info {
+      padding: 1.3rem 1.5rem;
+    }
+
+    .book-info h3 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.15rem;
+      color: #2a2a2a;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 0.15rem;
+    }
+
+    .book-info .author {
+      font-size: 0.85rem;
+      color: #c0506e;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .book-info .tags {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.7rem;
+    }
+
+    .pill {
+      font-size: 0.65rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 3px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .pill-genre { background: #f0e8ee; color: #6b3a5e; }
+    .pill-age { background: #e8efe8; color: #4a7a52; }
+    .pill-star { background: #fdf3e1; color: #8a6a20; }
+
+    .book-info .blurb {
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: #444;
+      margin-bottom: 0.7rem;
+    }
+
+    .book-info .lola-note {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #666;
+      padding: 0.7rem 0.9rem;
+      background: #faf7f3;
+      border-left: 3px solid #d4a0c0;
+      border-radius: 0 4px 4px 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-info .lola-note b {
+      color: #4a2040;
+      font-weight: 600;
+    }
+
+    .book-info .source {
+      font-size: 0.73rem;
+      color: #aaa;
+    }
+
+    /* ── DIVIDER ── */
+    .section-rule {
+      border: none;
+      border-top: 1px solid #e5ddd5;
+      margin: 3rem 0 1.5rem;
+    }
+
+    /* ── ARCHIVE ── */
+    .archive h2, .about h2 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.25rem;
+      color: #4a2040;
+      margin-bottom: 0.8rem;
+    }
+
+    .archive ul {
+      list-style: none;
+    }
+
+    .archive li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #ece6df;
+      font-size: 0.9rem;
+    }
+
+    .archive li a {
+      color: #4a2040;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .archive li a:hover { text-decoration: underline; }
+
+    .archive li span {
+      color: #bbb;
+      font-size: 0.8rem;
+      margin-left: 0.4rem;
+    }
+
+    /* ── ABOUT ── */
+    .about p {
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: #666;
+      max-width: 580px;
+    }
+
+    .about .note {
+      margin-top: 0.8rem;
+      font-size: 0.82rem;
+      color: #aaa;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #4a2040;
+      color: #a07a94;
+      text-align: center;
+      padding: 1.8rem 1.5rem;
+      font-size: 0.8rem;
+      margin-top: 3rem;
+    }
+
+    footer strong { color: #e0c8d8; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.9rem; }
+      header { padding: 2rem 1rem 1.6rem; }
+      main { padding: 1.5rem 1rem 2rem; }
+
+      .book-card {
+        grid-template-columns: 100px 1fr;
+      }
+
+      .book-info { padding: 1rem; }
+      .book-info h3 { font-size: 1rem; }
+    }
+
+    @media (max-width: 420px) {
+      .book-card {
+        grid-template-columns: 1fr;
+      }
+
+      .book-cover {
+        height: 220px;
+      }
+
+      .book-cover img {
+        object-fit: contain;
+        background: #ece6df;
+        padding: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <h1>Lola's Library</h1>
+    <p class="tagline">The best new books for a smart, curious reader</p>
+  </div>
+</header>
+
+<nav>
+  <div class="inner">
+    <a href="#this-week" class="active">This Week</a>
+    <a href="#archive">Archive</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+
+<main>
+
+  <section id="this-week">
+    <div class="week-header">
+      <h2>This Week's Picks</h2>
+      <div class="date">March 13, 2026</div>
+    </div>
+
+    <p class="intro-note">
+      Five new and recent fiction picks getting great reviews right now &mdash; mystery, magic, friendship, and figuring out who you are. Grab one on your next library trip. Or grab all five. We won't judge.
+    </p>
+
+    <!-- 1 -->
+    <div class="book-card">
+      <div class="book-cover">
+        <span class="pick-num">1</span>
+        <img src="https://images.penguinrandomhouse.com/cover/9780593485583" alt="When Tomorrow Burns">
+      </div>
+      <div class="book-info">
+        <h3>When Tomorrow Burns</h3>
+        <div class="author">Tae Keller</div>
+        <div class="tags">
+          <span class="pill pill-genre">Fantasy</span>
+          <span class="pill pill-age">Ages 10&ndash;14</span>
+          <span class="pill pill-star">Newbery winner</span>
+        </div>
+        <p class="blurb">Three friends discover an ancient prophecy coming true as wildfires sweep through Seattle. From the author of <em>When You Trap a Tiger</em>, a story about what you'd sacrifice for the people you love.</p>
+        <div class="lola-note">
+          <b>For Lola:</b> Myth meets real-world stakes. If you couldn't put down <em>When You Trap a Tiger</em>, this one goes even bigger.
+        </div>
+        <div class="source">March 3, 2026 &middot; Random House &middot; 272 pp.</div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="book-card">
+      <div class="book-cover">
+        <span class="pick-num">2</span>
+        <img src="https://images.penguinrandomhouse.com/cover/9780593488744" alt="Mystery on Macaw Mountain">
+      </div>
+      <div class="book-info">
+        <h3>Mystery on Macaw Mountain</h3>
+        <div class="author">Mar&iacute;a Jos&eacute; Fitzgerald</div>
+        <div class="tags">
+          <span class="pill pill-genre">Mystery</span>
+          <span class="pill pill-age">Ages 8&ndash;12</span>
+        </div>
+        <p class="blurb">Four cousins at a bird sanctuary in Honduras have to solve the theft of eight nearly extinct scarlet macaws. The trail leads through downtown Cop&aacute;n and into mist-shrouded Mayan ruins.</p>
+        <div class="lola-note">
+          <b>For Lola:</b> A real page-turner with a tropical setting, cool animal facts, and cousins who tease each other one minute and save the day the next.
+        </div>
+        <div class="source">March 10, 2026 &middot; Knopf &middot; 272 pp.</div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="book-card">
+      <div class="book-cover">
+        <span class="pick-num">3</span>
+        <img src="https://images.penguinrandomhouse.com/cover/9781665974127" alt="No Way, Never Sisters">
+      </div>
+      <div class="book-info">
+        <h3>No Way, Never Sisters</h3>
+        <div class="author">Chantel Acevedo &amp; Natalia Sylvester</div>
+        <div class="tags">
+          <span class="pill pill-genre">Humor</span>
+          <span class="pill pill-age">Ages 8&ndash;12</span>
+        </div>
+        <p class="blurb">Melisa and Roxy can't stand each other. So when their parents get engaged, they launch an all-out sabotage campaign. Somewhere between the pranks and the chaos, they realize becoming sisters might not be the worst thing ever.</p>
+        <div class="lola-note">
+          <b>For Lola:</b> <em>The Parent Trap</em> in reverse. Laugh-out-loud funny, genuinely creative pranks, and two voices that sound nothing alike.
+        </div>
+        <div class="source">March 10, 2026 &middot; Aladdin &middot; 288 pp.</div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="book-card">
+      <div class="book-cover">
+        <span class="pick-num">4</span>
+        <img src="https://images.penguinrandomhouse.com/cover/9780593624555" alt="The Moon Without Stars">
+      </div>
+      <div class="book-info">
+        <h3>The Moon Without Stars</h3>
+        <div class="author">Chanel Miller</div>
+        <div class="tags">
+          <span class="pill pill-genre">Realistic fiction</span>
+          <span class="pill pill-age">Ages 10&ndash;14</span>
+          <span class="pill pill-star">Starred &middot; NYT bestseller</span>
+        </div>
+        <p class="blurb">Seventh-grader Luna makes zines with her best friend Scott. When classmates start paying attention, Luna gets swept into the popular crowd &mdash; and has to figure out how much of herself she's willing to give up to stay there.</p>
+        <div class="lola-note">
+          <b>For Lola:</b> Funny, anxious, and so real. Called "today's <em>Are You There God? It's Me, Margaret.</em>" The zine-making thread is especially cool.
+        </div>
+        <div class="source">Jan. 13, 2026 &middot; Philomel &middot; Starred review (The Horn Book)</div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="book-card">
+      <div class="book-cover">
+        <span class="pick-num">5</span>
+        <img src="https://images.penguinrandomhouse.com/cover/9780063321786" alt="Each and Every Spark">
+      </div>
+      <div class="book-info">
+        <h3>Each and Every Spark</h3>
+        <div class="author">Claire Swinarski</div>
+        <div class="tags">
+          <span class="pill pill-genre">Historical / Mystery</span>
+          <span class="pill pill-age">Ages 10&ndash;13</span>
+          <span class="pill pill-star">Edgar-nominated author</span>
+        </div>
+        <p class="blurb">Contractors find a 1944 painting and a mysterious letter hidden inside a Paris apartment wall. In the present, Penny wants to know who put it there. In 1943, a girl named Marie is trying to survive Nazi-occupied France. Two timelines, one secret.</p>
+        <div class="lola-note">
+          <b>For Lola:</b> A puzzle-box of a book. If you love art, history, and secrets, this one doesn't let go.
+        </div>
+        <div class="source">Feb. 17, 2026 &middot; Quill Tree Books</div>
+      </div>
+    </div>
+
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- ARCHIVE -->
+  <section id="archive" class="archive">
+    <h2>Past Editions</h2>
+    <ul>
+      <li>
+        <a href="#this-week">March 13, 2026</a>
+        <span>&mdash; current</span>
+      </li>
+    </ul>
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>
+      <strong>Lola's Library</strong> is a weekly list of the five best-reviewed new fiction books for readers around age 12. Every Friday, we check starred reviews, librarian picks, and book lists to find titles that are smart, absorbing, and hard to put down &mdash; across mystery, fantasy, contemporary, historical fiction, and whatever else is good. If you're looking for your next favorite book, start here.
+    </p>
+    <p class="note">New picks every Friday.</p>
+  </section>
+
+</main>
+
+<footer>
+  <strong>Lola's Library</strong> &middot; New picks weekly &middot; Happy reading.
+</footer>
+
+</body>
+</html>
