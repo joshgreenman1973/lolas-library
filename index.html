@@ -125,6 +125,7 @@
     .book-cover {
       position: relative;
       background: #ece6df;
+      min-height: 195px;
     }
 
     .book-cover img {
@@ -303,13 +304,14 @@
       }
 
       .book-cover {
-        height: 220px;
+        aspect-ratio: 2 / 3;
+        max-height: 280px;
+        margin: 0 auto;
+        width: 187px;
       }
 
       .book-cover img {
-        object-fit: contain;
-        background: #ece6df;
-        padding: 0.8rem;
+        object-fit: cover;
       }
     }
   </style>
@@ -335,33 +337,33 @@
 
   <section id="this-week">
     <div class="week-header">
-      <h2>This Week's Picks</h2>
-      <div class="date">March 13, 2026</div>
+      <h2>This week's picks</h2>
+      <div class="date">April 11, 2026</div>
     </div>
 
     <p class="intro-note">
-      Five new and recent fiction picks getting great reviews right now &mdash; mystery, magic, friendship, and figuring out who you are. Grab one on your next library trip. Or grab all five. We won't judge.
+      Ghosts, quests, moths, music, and a bat mitzvah &mdash; this week's five are all over the map in the best possible way. One has a Kirkus star, another has a PW star, and all of them are the kind of book you stay up too late reading.
     </p>
 
     <!-- 1 -->
     <div class="book-card">
       <div class="book-cover">
         <span class="pick-num">1</span>
-        <img src="https://images.penguinrandomhouse.com/cover/9780593485583" alt="When Tomorrow Burns">
+        <img src="https://images.penguinrandomhouse.com/cover/9781101994627" alt="Found Sound">
       </div>
       <div class="book-info">
-        <h3>When Tomorrow Burns</h3>
-        <div class="author">Tae Keller</div>
+        <h3>Found Sound</h3>
+        <div class="author">Meg Wolitzer &amp; Charlie Panek</div>
         <div class="tags">
-          <span class="pill pill-genre">Fantasy</span>
-          <span class="pill pill-age">Ages 10&ndash;14</span>
-          <span class="pill pill-star">Newbery winner</span>
+          <span class="pill pill-genre">Mystery / STEM</span>
+          <span class="pill pill-age">Ages 8&ndash;12</span>
+          <span class="pill pill-star">Starred &middot; Kirkus</span>
         </div>
-        <p class="blurb">Three friends discover an ancient prophecy coming true as wildfires sweep through Seattle. From the author of <em>When You Trap a Tiger</em>, a story about what you'd sacrifice for the people you love.</p>
+        <p class="blurb">Felix's summers in Blissfield haven't been the same since his big brother left home. Then he and his neighbor Marigold find a mysterious box labeled OPEN ME, stuffed with an audio recorder and a cryptic message that sends them on a sound-themed treasure hunt across town.</p>
         <div class="lola-note">
-          <b>For Lola:</b> Myth meets real-world stakes. If you couldn't put down <em>When You Trap a Tiger</em>, this one goes even bigger.
+          <b>For Lola:</b> Part puzzle mystery, part crash course in how sound actually works &mdash; reverb, anechoic chambers, the whole deal. You'll want to listen to everything differently after this one.
         </div>
-        <div class="source">March 3, 2026 &middot; Random House &middot; 272 pp.</div>
+        <div class="source">April 21, 2026 &middot; Dutton &middot; Starred review (Kirkus)</div>
       </div>
     </div>
 
@@ -369,20 +371,21 @@
     <div class="book-card">
       <div class="book-cover">
         <span class="pick-num">2</span>
-        <img src="https://images.penguinrandomhouse.com/cover/9780593488744" alt="Mystery on Macaw Mountain">
+        <img src="https://images.penguinrandomhouse.com/cover/9780593695135" alt="When You're Brave Enough">
       </div>
       <div class="book-info">
-        <h3>Mystery on Macaw Mountain</h3>
-        <div class="author">Mar&iacute;a Jos&eacute; Fitzgerald</div>
+        <h3>When You're Brave Enough</h3>
+        <div class="author">Rebecca Bendheim</div>
         <div class="tags">
-          <span class="pill pill-genre">Mystery</span>
-          <span class="pill pill-age">Ages 8&ndash;12</span>
+          <span class="pill pill-genre">Contemporary</span>
+          <span class="pill pill-age">Ages 10&ndash;14</span>
+          <span class="pill pill-star">Starred &middot; Publishers Weekly</span>
         </div>
-        <p class="blurb">Four cousins at a bird sanctuary in Honduras have to solve the theft of eight nearly extinct scarlet macaws. The trail leads through downtown Cop&aacute;n and into mist-shrouded Mayan ruins.</p>
+        <p class="blurb">Eighth-grader Lacey moves across the country, away from her lifelong best friend Grace. At her new theater-arts magnet school in Rhode Island, she lands the lead in the musical, preps for her bat mitzvah, and starts figuring out who she is when she's not standing in someone else's shadow.</p>
         <div class="lola-note">
-          <b>For Lola:</b> A real page-turner with a tropical setting, cool animal facts, and cousins who tease each other one minute and save the day the next.
+          <b>For Lola:</b> Honest and funny about all the stuff that's actually hard in eighth grade &mdash; new friendships, first crushes, and the terrifying freedom of getting to be yourself.
         </div>
-        <div class="source">March 10, 2026 &middot; Knopf &middot; 272 pp.</div>
+        <div class="source">April 7, 2026 &middot; Viking &middot; Starred review (Publishers Weekly)</div>
       </div>
     </div>
 
@@ -390,20 +393,21 @@
     <div class="book-card">
       <div class="book-cover">
         <span class="pick-num">3</span>
-        <img src="https://images.penguinrandomhouse.com/cover/9781665974127" alt="No Way, Never Sisters">
+        <img src="https://images.penguinrandomhouse.com/cover/9781547615926" alt="Olive Oakes and the Haunted Carousel">
       </div>
       <div class="book-info">
-        <h3>No Way, Never Sisters</h3>
-        <div class="author">Chantel Acevedo &amp; Natalia Sylvester</div>
+        <h3>Olive Oakes and the Haunted Carousel</h3>
+        <div class="author">Kalynn Bayron</div>
         <div class="tags">
-          <span class="pill pill-genre">Humor</span>
+          <span class="pill pill-genre">Mystery / Horror</span>
           <span class="pill pill-age">Ages 8&ndash;12</span>
+          <span class="pill pill-star">Bestselling author</span>
         </div>
-        <p class="blurb">Melisa and Roxy can't stand each other. So when their parents get engaged, they launch an all-out sabotage campaign. Somewhere between the pranks and the chaos, they realize becoming sisters might not be the worst thing ever.</p>
+        <p class="blurb">Olive Oakes carries a notebook everywhere, ready to record anything suspicious. When her family visits Whispering Woods, she hears about a traveling carnival with a haunted carousel, missing kids, and ghost sightings &mdash; and decides to investigate.</p>
         <div class="lola-note">
-          <b>For Lola:</b> <em>The Parent Trap</em> in reverse. Laugh-out-loud funny, genuinely creative pranks, and two voices that sound nothing alike.
+          <b>For Lola:</b> Think Nancy Drew meets a ghost story. Olive is the kind of detective who actually writes everything down, and the carousel scenes are genuinely creepy.
         </div>
-        <div class="source">March 10, 2026 &middot; Aladdin &middot; 288 pp.</div>
+        <div class="source">April 7, 2026 &middot; Bloomsbury</div>
       </div>
     </div>
 
@@ -411,21 +415,20 @@
     <div class="book-card">
       <div class="book-cover">
         <span class="pick-num">4</span>
-        <img src="https://images.penguinrandomhouse.com/cover/9780593624555" alt="The Moon Without Stars">
+        <img src="https://images.penguinrandomhouse.com/cover/9781536243314" alt="Nell O'Dell Hates Quests">
       </div>
       <div class="book-info">
-        <h3>The Moon Without Stars</h3>
-        <div class="author">Chanel Miller</div>
+        <h3>Nell O'Dell Hates Quests</h3>
+        <div class="author">Emily B. Martin</div>
         <div class="tags">
-          <span class="pill pill-genre">Realistic fiction</span>
-          <span class="pill pill-age">Ages 10&ndash;14</span>
-          <span class="pill pill-star">Starred &middot; NYT bestseller</span>
+          <span class="pill pill-genre">Fantasy / Humor</span>
+          <span class="pill pill-age">Ages 8&ndash;12</span>
         </div>
-        <p class="blurb">Seventh-grader Luna makes zines with her best friend Scott. When classmates start paying attention, Luna gets swept into the popular crowd &mdash; and has to figure out how much of herself she's willing to give up to stay there.</p>
+        <p class="blurb">Nell is the daughter of legendary adventurers, but she'd rather tend her garden at the family inn than go on any quest, thank you very much. When the inn's deed is stolen, she reluctantly sets out with Midge, a dramatic goblin, and Bevin, a soft-spoken troll with a talent for herbcraft.</p>
         <div class="lola-note">
-          <b>For Lola:</b> Funny, anxious, and so real. Called "today's <em>Are You There God? It's Me, Margaret.</em>" The zine-making thread is especially cool.
+          <b>For Lola:</b> A fantasy that makes fun of fantasy &mdash; but also totally works as one. Nell's companions are unforgettable, and the whole thing has huge cozy-adventure energy.
         </div>
-        <div class="source">Jan. 13, 2026 &middot; Philomel &middot; Starred review (The Horn Book)</div>
+        <div class="source">April 7, 2026 &middot; Candlewick</div>
       </div>
     </div>
 
@@ -433,21 +436,20 @@
     <div class="book-card">
       <div class="book-cover">
         <span class="pick-num">5</span>
-        <img src="https://images.penguinrandomhouse.com/cover/9780063321786" alt="Each and Every Spark">
+        <img src="https://images.penguinrandomhouse.com/cover/9781665982085" alt="The Traitor Moth">
       </div>
       <div class="book-info">
-        <h3>Each and Every Spark</h3>
-        <div class="author">Claire Swinarski</div>
+        <h3>The Traitor Moth</h3>
+        <div class="author">Katharine Orton</div>
         <div class="tags">
-          <span class="pill pill-genre">Historical / Mystery</span>
-          <span class="pill pill-age">Ages 10&ndash;13</span>
-          <span class="pill pill-star">Edgar-nominated author</span>
+          <span class="pill pill-genre">Epic fantasy</span>
+          <span class="pill pill-age">Ages 8&ndash;12</span>
         </div>
-        <p class="blurb">Contractors find a 1944 painting and a mysterious letter hidden inside a Paris apartment wall. In the present, Penny wants to know who put it there. In 1943, a girl named Marie is trying to survive Nazi-occupied France. Two timelines, one secret.</p>
+        <p class="blurb">Catclaw is a young moth and the last of the Dreamkins, a noble clan in exile. When he receives a prophetic vision warning that all five moth clans are in danger, nobody believes him. Branded a traitor and cast out, he sets off alone to save them anyway.</p>
         <div class="lola-note">
-          <b>For Lola:</b> A puzzle-box of a book. If you love art, history, and secrets, this one doesn't let go.
+          <b>For Lola:</b> <em>Watership Down</em> but with moths. Massive world, high stakes, and a hero who has to earn every ounce of trust. The kind of fantasy you disappear into.
         </div>
-        <div class="source">Feb. 17, 2026 &middot; Quill Tree Books</div>
+        <div class="source">April 7, 2026 &middot; Simon &amp; Schuster</div>
       </div>
     </div>
 
@@ -457,13 +459,124 @@
 
   <!-- ARCHIVE -->
   <section id="archive" class="archive">
-    <h2>Past Editions</h2>
+    <h2>Past editions</h2>
     <ul>
       <li>
-        <a href="#this-week">March 13, 2026</a>
+        <a href="#this-week">April 11, 2026</a>
         <span>&mdash; current</span>
       </li>
+      <li>
+        <a href="#week-2026-03-13">March 13, 2026</a>
+      </li>
     </ul>
+
+    <!-- Archived: March 13, 2026 -->
+    <div class="archive-week" id="week-2026-03-13">
+      <h3 style="font-family: 'Libre Baskerville', serif; font-size: 1.1rem; color: #4a2040; margin: 2rem 0 1rem;">March 13, 2026</h3>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <span class="pick-num">1</span>
+          <img src="https://images.penguinrandomhouse.com/cover/9780593485583" alt="When Tomorrow Burns">
+        </div>
+        <div class="book-info">
+          <h3>When Tomorrow Burns</h3>
+          <div class="author">Tae Keller</div>
+          <div class="tags">
+            <span class="pill pill-genre">Fantasy</span>
+            <span class="pill pill-age">Ages 10&ndash;14</span>
+            <span class="pill pill-star">Newbery winner</span>
+          </div>
+          <p class="blurb">Three friends discover an ancient prophecy coming true as wildfires sweep through Seattle. From the author of <em>When You Trap a Tiger</em>, a story about what you'd sacrifice for the people you love.</p>
+          <div class="lola-note">
+            <b>For Lola:</b> Myth meets real-world stakes. If you couldn't put down <em>When You Trap a Tiger</em>, this one goes even bigger.
+          </div>
+          <div class="source">March 3, 2026 &middot; Random House &middot; 272 pp.</div>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <span class="pick-num">2</span>
+          <img src="https://images.penguinrandomhouse.com/cover/9780593488744" alt="Mystery on Macaw Mountain">
+        </div>
+        <div class="book-info">
+          <h3>Mystery on Macaw Mountain</h3>
+          <div class="author">Mar&iacute;a Jos&eacute; Fitzgerald</div>
+          <div class="tags">
+            <span class="pill pill-genre">Mystery</span>
+            <span class="pill pill-age">Ages 8&ndash;12</span>
+          </div>
+          <p class="blurb">Four cousins at a bird sanctuary in Honduras have to solve the theft of eight nearly extinct scarlet macaws. The trail leads through downtown Cop&aacute;n and into mist-shrouded Mayan ruins.</p>
+          <div class="lola-note">
+            <b>For Lola:</b> A real page-turner with a tropical setting, cool animal facts, and cousins who tease each other one minute and save the day the next.
+          </div>
+          <div class="source">March 10, 2026 &middot; Knopf &middot; 272 pp.</div>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <span class="pick-num">3</span>
+          <img src="https://images.penguinrandomhouse.com/cover/9781665974127" alt="No Way, Never Sisters">
+        </div>
+        <div class="book-info">
+          <h3>No Way, Never Sisters</h3>
+          <div class="author">Chantel Acevedo &amp; Natalia Sylvester</div>
+          <div class="tags">
+            <span class="pill pill-genre">Humor</span>
+            <span class="pill pill-age">Ages 8&ndash;12</span>
+          </div>
+          <p class="blurb">Melisa and Roxy can't stand each other. So when their parents get engaged, they launch an all-out sabotage campaign. Somewhere between the pranks and the chaos, they realize becoming sisters might not be the worst thing ever.</p>
+          <div class="lola-note">
+            <b>For Lola:</b> <em>The Parent Trap</em> in reverse. Laugh-out-loud funny, genuinely creative pranks, and two voices that sound nothing alike.
+          </div>
+          <div class="source">March 10, 2026 &middot; Aladdin &middot; 288 pp.</div>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <span class="pick-num">4</span>
+          <img src="https://images.penguinrandomhouse.com/cover/9780593624555" alt="The Moon Without Stars">
+        </div>
+        <div class="book-info">
+          <h3>The Moon Without Stars</h3>
+          <div class="author">Chanel Miller</div>
+          <div class="tags">
+            <span class="pill pill-genre">Realistic fiction</span>
+            <span class="pill pill-age">Ages 10&ndash;14</span>
+            <span class="pill pill-star">Starred &middot; NYT bestseller</span>
+          </div>
+          <p class="blurb">Seventh-grader Luna makes zines with her best friend Scott. When classmates start paying attention, Luna gets swept into the popular crowd &mdash; and has to figure out how much of herself she's willing to give up to stay there.</p>
+          <div class="lola-note">
+            <b>For Lola:</b> Funny, anxious, and so real. Called "today's <em>Are You There God? It's Me, Margaret.</em>" The zine-making thread is especially cool.
+          </div>
+          <div class="source">Jan. 13, 2026 &middot; Philomel &middot; Starred review (The Horn Book)</div>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <div class="book-cover">
+          <span class="pick-num">5</span>
+          <img src="https://images.penguinrandomhouse.com/cover/9780063321786" alt="Each and Every Spark">
+        </div>
+        <div class="book-info">
+          <h3>Each and Every Spark</h3>
+          <div class="author">Claire Swinarski</div>
+          <div class="tags">
+            <span class="pill pill-genre">Historical / Mystery</span>
+            <span class="pill pill-age">Ages 10&ndash;13</span>
+            <span class="pill pill-star">Edgar-nominated author</span>
+          </div>
+          <p class="blurb">Contractors find a 1944 painting and a mysterious letter hidden inside a Paris apartment wall. In the present, Penny wants to know who put it there. In 1943, a girl named Marie is trying to survive Nazi-occupied France. Two timelines, one secret.</p>
+          <div class="lola-note">
+            <b>For Lola:</b> A puzzle-box of a book. If you love art, history, and secrets, this one doesn't let go.
+          </div>
+          <div class="source">Feb. 17, 2026 &middot; Quill Tree Books</div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <hr class="section-rule">
