@@ -243,8 +243,134 @@
       margin: 3rem 0 1.5rem;
     }
 
+    /* -- SIX MONTHS IN REVIEW -- */
+    .six-months .lede {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #555;
+      max-width: 620px;
+      margin: 0.9rem 0 1.6rem;
+    }
+
+    .six-months .sub {
+      font-size: 0.82rem;
+      color: #999;
+      margin-top: 0.15rem;
+    }
+
+    .rank-row {
+      display: grid;
+      grid-template-columns: 62px 1fr;
+      gap: 0.9rem;
+      background: white;
+      border-radius: 6px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 0.8rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+
+    .rank-row .score {
+      text-align: center;
+      border-right: 1px solid #ece6df;
+      padding-right: 0.6rem;
+    }
+
+    .rank-row .score .count {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #4a2040;
+      line-height: 1.1;
+    }
+
+    .rank-row .score .label {
+      font-size: 0.58rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #a58a3a;
+      font-weight: 600;
+      line-height: 1.3;
+      display: block;
+      margin-top: 0.15rem;
+    }
+
+    .rank-row h3 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.05rem;
+      color: #2a2a2a;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .rank-row .by {
+      font-size: 0.82rem;
+      color: #c0506e;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .rank-row .meta {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+
+    .rank-row .why {
+      font-size: 0.87rem;
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 0.4rem;
+    }
+
+    .rank-row .stars-from {
+      font-size: 0.72rem;
+      color: #aaa;
+    }
+
+    .pill-run { background: #f2eee8; color: #7a6a55; }
+    .pill-new { background: #fbeaee; color: #a03a58; }
+
+    .six-months .method {
+      font-size: 0.78rem;
+      line-height: 1.7;
+      color: #999;
+      max-width: 620px;
+      margin-top: 1.4rem;
+      padding-top: 0.9rem;
+      border-top: 1px solid #ece6df;
+    }
+
+    .six-months .also {
+      background: white;
+      border-radius: 6px;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      margin-top: 1.2rem;
+    }
+
+    .six-months .also h4 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.92rem;
+      color: #4a2040;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .also-line {
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: #444;
+      padding: 0.45rem 0;
+      border-top: 1px solid #f2ede6;
+    }
+
+    .also-line b { color: #2a2a2a; font-weight: 600; }
+    .also-line i { color: #c0506e; font-style: normal; }
+    .also-line span { color: #aaa; font-size: 0.75rem; }
+
     /* -- ARCHIVE -- */
-    .archive h2, .about h2 {
+    .archive h2, .about h2, .six-months h2 {
       font-family: 'Libre Baskerville', serif;
       font-size: 1.25rem;
       color: #4a2040;
@@ -313,6 +439,25 @@
 
       .book-info { padding: 1rem; }
       .book-info h3 { font-size: 1rem; }
+
+      .rank-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      .rank-row .score {
+        text-align: left;
+        border-right: none;
+        border-bottom: 1px solid #ece6df;
+        padding-right: 0;
+        padding-bottom: 0.4rem;
+        display: flex;
+        align-items: baseline;
+        gap: 0.4rem;
+      }
+
+      .rank-row .score .count { font-size: 1.2rem; }
+      .rank-row .score .label { margin-top: 0; }
     }
 
     @media (max-width: 420px) {
@@ -345,6 +490,7 @@
 <nav>
   <div class="inner">
     <a href="#this-week" class="active">This Week</a>
+    <a href="#six-months">Six Months</a>
     <a href="#archive">Archive</a>
     <a href="#about">About</a>
   </div>
@@ -475,6 +621,137 @@
       </div>
     </div>
 
+  </section>
+
+  <hr class="section-rule">
+
+  <!-- SIX MONTHS IN REVIEW -->
+  <section id="six-months" class="six-months">
+    <h2>Six months in review</h2>
+    <div class="sub">2026 releases &middot; ages 12 to 14 &middot; counted August 29, 2026</div>
+
+    <p class="lede">
+      Six months of weekly picks, sorted by the one thing about a book review that can actually be counted: how many journals gave it a star. Six titles for this age group took more than one star. Most of them ran in a weekly list here first. Two did not, and they are on this page because the reviews were too strong to leave off.
+    </p>
+
+    <div class="rank-row">
+      <div class="score">
+        <div class="count">6</div>
+        <span class="label">starred<br>reviews</span>
+      </div>
+      <div>
+        <h3>The Lions' Run</h3>
+        <div class="by">Sara Pennypacker &middot; illustrated by Jon Klassen</div>
+        <div class="meta">
+          <span class="pill pill-genre">Historical fiction</span>
+          <span class="pill pill-age">Ages 10&ndash;14</span>
+          <span class="pill pill-run">Featured April 17</span>
+        </div>
+        <p class="why">Lucas DuBois is sick of his reputation as a coward and sick of the Germans occupying his French village. Rescuing a litter of kittens from bullies is what pulls him into the Resistance, and into deciding what kind of person he actually wants to be. From the author of Pax, with art by Caldecott winner Jon Klassen. Independent booksellers also made it their top Kids' Indie Next pick for March and April.</p>
+        <div class="stars-from">Stars from Booklist, Kirkus, Publishers Weekly, School Library Journal, Shelf Awareness and The Horn Book</div>
+      </div>
+    </div>
+    <div class="rank-row">
+      <div class="score">
+        <div class="count">5</div>
+        <span class="label">starred<br>reviews</span>
+      </div>
+      <div>
+        <h3>Inbetweens</h3>
+        <div class="by">Faith Erin Hicks</div>
+        <div class="meta">
+          <span class="pill pill-genre">Graphic novel</span>
+          <span class="pill pill-age">Ages 10&ndash;14</span>
+          <span class="pill pill-new">Not yet featured</span>
+        </div>
+        <p class="why">Twin sisters Ash and Sloane have drawn together their whole lives, so summer animation camp should be the best thing that ever happened to them. Then Sloane realizes she is not actually excited, which is a hard thing to admit about the one thing you and your sister are supposed to share.</p>
+        <div class="stars-from">Stars from Booklist, BookPage, Kirkus, Publishers Weekly and School Library Journal</div>
+      </div>
+    </div>
+    <div class="rank-row">
+      <div class="score">
+        <div class="count">4</div>
+        <span class="label">starred<br>reviews</span>
+      </div>
+      <div>
+        <h3>Diamond Fever!</h3>
+        <div class="by">Steve Sheinkin &middot; illustrated by Jon Chad</div>
+        <div class="meta">
+          <span class="pill pill-genre">Narrative nonfiction</span>
+          <span class="pill pill-age">Ages 9&ndash;14</span>
+          <span class="pill pill-new">Not yet featured</span>
+        </div>
+        <p class="why">In 1872 two prospectors scattered cheap gems across an empty stretch of Wyoming and sold the richest men in San Francisco a diamond field that did not exist. Sheinkin tells it as a heist, with comics running through it, and the payoff is a hoax that nearly worked.</p>
+        <div class="stars-from">Stars from Booklist, Kirkus, Publishers Weekly and School Library Journal</div>
+      </div>
+    </div>
+    <div class="rank-row">
+      <div class="score">
+        <div class="count">3</div>
+        <span class="label">starred<br>reviews</span>
+      </div>
+      <div>
+        <h3>Shook</h3>
+        <div class="by">Julian Randall &middot; illustrated by Nathan Walker</div>
+        <div class="meta">
+          <span class="pill pill-genre">Contemporary / Novel in verse</span>
+          <span class="pill pill-age">Ages 9&ndash;14</span>
+          <span class="pill pill-run">Featured August 3</span>
+        </div>
+        <p class="why">Malik Page is an eighth grader in Chicago chasing a varsity spot until his ankle fractures, and the rest of the book is about who he is once the thing he is best at gets taken away. Kirkus singled out the layouts and the typography, which do as much work here as the lines do.</p>
+        <div class="stars-from">Stars from Booklist, Kirkus and School Library Journal</div>
+      </div>
+    </div>
+    <div class="rank-row">
+      <div class="score">
+        <div class="count">2</div>
+        <span class="label">starred<br>reviews</span>
+      </div>
+      <div>
+        <h3>Raven, Rising</h3>
+        <div class="by">Christine Hartman Derr</div>
+        <div class="meta">
+          <span class="pill pill-genre">Fantasy / Contemporary</span>
+          <span class="pill pill-age">Ages 9&ndash;13</span>
+          <span class="pill pill-run">Featured July 3</span>
+        </div>
+        <p class="why">Raven Miller moves to Bear Creek Falls, lands in the path of a clique and a rumor that she is a witch who killed her own parents, and then discovers the rumor is not entirely wrong: when she bakes, the food changes the lives of whoever eats it. A debut, with a Cherokee heroine.</p>
+        <div class="stars-from">Stars from Kirkus and Publishers Weekly</div>
+      </div>
+    </div>
+    <div class="rank-row">
+      <div class="score">
+        <div class="count">2</div>
+        <span class="label">starred<br>reviews</span>
+      </div>
+      <div>
+        <h3>Quetzal's Labyrinth</h3>
+        <div class="by">Karla Arenas Valenti</div>
+        <div class="meta">
+          <span class="pill pill-genre">Fantasy / Adventure</span>
+          <span class="pill pill-age">Ages 9&ndash;12</span>
+          <span class="pill pill-run">Featured this week</span>
+        </div>
+        <p class="why">Aztec gods, a labyrinth that rearranges itself and a twelve-year-old with no good options. Kirkus placed it among the best middle-grade mythological fantasy, which is a crowded shelf to stand out on.</p>
+        <div class="stars-from">Stars from Kirkus and Publishers Weekly</div>
+      </div>
+    </div>
+
+    <div class="also">
+      <h4>Also starred, one apiece</h4>
+        <div class="also-line"><b>Thunder and Mercy</b> &middot; <i>Jennifer Robin Barr</i> &mdash; Historical mystery, Ages 10&ndash;14. <span>Star from School Library Journal &middot; featured July 17</span></div>
+        <div class="also-line"><b>The Ginghams</b> &middot; <i>T. C. Kemper</i> &mdash; Horror, Ages 10&ndash;14. <span>Star from School Library Journal &middot; featured July 17</span></div>
+        <div class="also-line"><b>Spindlewood</b> &middot; <i>Freddie K&ouml;lsch</i> &mdash; Fantasy mystery, Ages 10&ndash;14. <span>Star from Booklist &middot; featured July 3</span></div>
+        <div class="also-line"><b>The Genie Game</b> &middot; <i>Jordan Ifueko</i> &mdash; Dystopian fantasy, Ages 10&ndash;14. <span>Star from Publishers Weekly &middot; featured April 17</span></div>
+        <div class="also-line"><b>Eva to the Max</b> &middot; <i>Rebecca Caprara</i> &mdash; Sports, in verse, Ages 10&ndash;14. <span>Star from Kirkus &middot; featured May 29</span></div>
+        <div class="also-line"><b>Kestrel Takes Flight</b> &middot; <i>Joy McCullough</i> &mdash; Contemporary, Ages 9&ndash;14. <span>Star from The Horn Book &middot; featured May 29</span></div>
+        <div class="also-line"><b>The Moon Without Stars</b> &middot; <i>Chanel Miller</i> &mdash; Realistic fiction, Ages 10&ndash;14. <span>Star from The Horn Book &middot; featured March 13</span></div>
+        <div class="also-line"><b>The Gods Will Sing Our Song</b> &middot; <i>Autumn Krause</i> &mdash; Historical fiction, Ages 12 and up. <span>Star from Publishers Weekly &middot; featured this week</span></div>
+    </div>
+
+    <p class="method">
+      <b>How this was counted.</b> The pool is the books featured in the weekly lists here between March 13 and August 29, 2026, filtered to those whose publisher age range reaches 13 or 14, plus two 2026 titles that were not featured and out-starred most of the ones that were. Star counts were compiled on August 29, 2026 from starred-review round-ups published by the journals and by publishers, covering Booklist, BookPage, Kirkus, Publishers Weekly, School Library Journal, Shelf Awareness and The Horn Book. That is not every journal, and counts move as late reviews land, so this is a snapshot rather than a final tally &mdash; a book missing here may simply not have been counted. Age ranges are the publishers' own. This page was assembled by an automated weekly process reading published reviews, so check a review yourself before you spend money on one.
+    </p>
   </section>
 
   <hr class="section-rule">
